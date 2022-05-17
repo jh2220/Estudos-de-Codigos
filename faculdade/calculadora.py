@@ -28,6 +28,12 @@ class Calculadora:
     def multiplicar(self, valueA, valueB):
         self.memoria = valueA * valueB
         return valueA * valueB
+    def radicao(self, valueA):
+        self.memoria = valueA ** 0.5
+        return valueA ** 0.5
+    def potenciacao(self, valueA, valueB):
+        self.memoria = valueA ** valueB
+        return valueA ** valueB
 
 'Vamos teste a classe?'
 minhaCalculadora = Calculadora()
@@ -43,6 +49,12 @@ print(minhaCalculadora.memoria)
 minhaCalculadora.dividir(minhaCalculadora.memoria, 2)
 print(minhaCalculadora.memoria)
 minhaCalculadora.multiplicar(minhaCalculadora.memoria, 4)
+print(minhaCalculadora.memoria)
+
+'Radicao e Potenciacao'
+minhaCalculadora.radicao(5)
+print(minhaCalculadora.memoria)
+minhaCalculadora.potenciacao(2, 3)
 print(minhaCalculadora.memoria)
 
 'limpando a memoria'
