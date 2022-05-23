@@ -38,6 +38,12 @@ void insert_end(struct Node** init_ref, int new_data)
     new_node->dado = new_data;
     new_node->next = NULL;
 
+    if(*init_ref == NULL)
+    {
+        *init_ref = new_node;
+        return;
+    }
+
     struct Node* loop_node = *init_ref;
 
     while(loop_node!= NULL)
